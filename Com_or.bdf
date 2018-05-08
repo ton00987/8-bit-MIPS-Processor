@@ -20,6 +20,38 @@ applicable agreement for further details.
 */
 (header "graphic" (version "1.4"))
 (pin
+	(input)
+	(rect -688 64 -520 80)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -152 104 16 120)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "reg_write" (rect 5 0 49 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 712 64 888 80)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -152,9 +184,38 @@ applicable agreement for further details.
 	)
 )
 (symbol
+	(rect -480 152 -200 232)
+	(text "PC" (rect 5 0 20 12)(font "Arial" ))
+	(text "inst4" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "current_instruction[2..0]" (rect 0 0 116 12)(font "Arial" ))
+		(text "current_instruction[2..0]" (rect 21 43 137 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "next_instruction[2..0]" (rect 0 0 103 12)(font "Arial" ))
+		(text "next_instruction[2..0]" (rect 172 27 275 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 64))
+	)
+)
+(symbol
 	(rect -152 152 72 232)
 	(text "instruction_mem" (rect 5 0 86 12)(font "Arial" ))
-	(text "inst" (rect 8 64 25 76)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -174,10 +235,6 @@ applicable agreement for further details.
 	)
 )
 (connector
-	(pt 248 152)
-	(pt 272 152)
-)
-(connector
 	(pt 224 360)
 	(pt 992 360)
 	(bus)
@@ -186,20 +243,6 @@ applicable agreement for further details.
 	(pt 224 232)
 	(pt 224 360)
 	(bus)
-)
-(connector
-	(pt 992 152)
-	(pt 904 152)
-	(bus)
-)
-(connector
-	(pt 992 360)
-	(pt 992 152)
-	(bus)
-)
-(connector
-	(pt 248 168)
-	(pt 272 168)
 )
 (connector
 	(pt 224 232)
@@ -234,16 +277,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 496 168)
-	(pt 704 168)
-	(bus)
-)
-(connector
-	(pt 704 168)
-	(pt 752 168)
-	(bus)
-)
-(connector
 	(pt 688 72)
 	(pt 712 72)
 	(bus)
@@ -251,21 +284,6 @@ applicable agreement for further details.
 (connector
 	(pt 688 152)
 	(pt 688 72)
-	(bus)
-)
-(connector
-	(pt 496 152)
-	(pt 688 152)
-	(bus)
-)
-(connector
-	(pt 688 152)
-	(pt 752 152)
-	(bus)
-)
-(connector
-	(pt 560 184)
-	(pt 560 64)
 	(bus)
 )
 (connector
@@ -284,23 +302,127 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+	(text "instruction[5..4]" (rect 162 168 238 180)(font "Arial" ))
+	(pt 152 184)
+	(pt 272 184)
+	(bus)
+)
+(connector
+	(pt -480 200)
+	(pt -520 200)
+	(bus)
+)
+(connector
+	(pt -520 200)
+	(pt -520 280)
+	(bus)
+)
+(connector
+	(pt -176 280)
+	(pt -520 280)
+	(bus)
+)
+(connector
+	(pt -176 280)
+	(pt -176 184)
+	(bus)
+)
+(connector
+	(pt -200 184)
+	(pt -176 184)
+	(bus)
+)
+(connector
+	(pt -176 184)
+	(pt -152 184)
+	(bus)
+)
+(connector
+	(pt 992 152)
+	(pt 904 152)
+	(bus)
+)
+(connector
+	(pt 992 360)
+	(pt 992 152)
+	(bus)
+)
+(connector
+	(pt 560 64)
+	(pt 560 184)
+	(bus)
+)
+(connector
 	(text "instruction[7..6]" (rect 570 168 646 180)(font "Arial" ))
 	(pt 560 184)
 	(pt 752 184)
 	(bus)
 )
 (connector
+	(pt 496 152)
+	(pt 688 152)
+	(bus)
+)
+(connector
+	(pt 688 152)
+	(pt 752 152)
+	(bus)
+)
+(connector
+	(pt 496 168)
+	(pt 704 168)
+	(bus)
+)
+(connector
+	(pt 704 168)
+	(pt 752 168)
+	(bus)
+)
+(connector
+	(text "instruction[7..0]" (rect 82 168 158 180)(font "Arial" ))
 	(pt 72 184)
 	(pt 152 184)
 	(bus)
 )
 (connector
-	(text "instruction[5..4]" (rect 162 168 238 180)(font "Arial" ))
-	(pt 152 184)
-	(pt 272 184)
-	(bus)
+	(pt -496 184)
+	(pt -496 72)
+)
+(connector
+	(pt -496 184)
+	(pt -480 184)
+)
+(connector
+	(pt -520 72)
+	(pt -496 72)
+)
+(connector
+	(pt -496 72)
+	(pt 104 72)
+)
+(connector
+	(pt 104 72)
+	(pt 104 152)
+)
+(connector
+	(pt 104 152)
+	(pt 272 152)
+)
+(connector
+	(pt 16 112)
+	(pt 248 112)
+)
+(connector
+	(pt 248 112)
+	(pt 248 168)
+)
+(connector
+	(pt 248 168)
+	(pt 272 168)
 )
 (junction (pt 152 184))
 (junction (pt 152 200))
 (junction (pt 704 168))
 (junction (pt 688 152))
+(junction (pt -176 184))
+(junction (pt -496 72))
