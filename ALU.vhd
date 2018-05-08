@@ -19,12 +19,12 @@ begin
     begin
   	   if (op = "00") then      -- AND Gate
         result <= a and b;
-      elsif (op = "01") then   -- OR Gate
-        result <= a or b;
-      elsif (op = "10") then   -- ADD
-        result <= a + b;
-      elsif (op = "11") then   -- SUB
+      elsif (op = "01") then   -- sub
         result <= a - b;
+      elsif (op = "10") then   -- add
+        result <= a + b;
+      elsif (op = "11") then   -- addi
+        result <= a + b;
       end if;
 		
   end process;
