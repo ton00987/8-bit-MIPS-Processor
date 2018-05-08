@@ -1,0 +1,14 @@
+*.qsf 
+*.qws 
+db
+output_files/ 
+*.bak
+incremental_db/ 
+*.txt
+simulation/ 
+*.done 
+*.rpt
+*.summary 
+*.vwf 
+*.ddb 
+ 
