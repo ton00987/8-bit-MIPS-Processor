@@ -3,15 +3,17 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_signed.all;
 
 entity ALU is
-  port( a, b: in std_logic_vector(7 downto 0);
-        op  : in std_logic_vector(1 downto 0);
-        y   : out std_logic_vector(7 downto 0)
+  port(
+    a, b: in std_logic_vector(7 downto 0);
+    op  : in std_logic_vector(1 downto 0);
+    y   : out std_logic_vector(7 downto 0)
   );
 
 end ALU;
 
 architecture data_flow of ALU is
   signal result: std_logic_vector(7 downto 0);
+  
 begin
   process(op, a, b)
     begin
