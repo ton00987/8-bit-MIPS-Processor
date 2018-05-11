@@ -4,14 +4,14 @@ It is developed by VHDL langauge in Quartus II 13.1 web edition.
 
 ## Instruction Set
 R-type of 8-bit-MIPS-Processor
-|op   |rs   |rt   |rd   |
-|:--: |:--: |:--: |:--: |
-|2 bit|2 bit|2 bit|2 bit|
+| op    | rs    | rt    | rd    |
+| :--:  | :--:  | :--:  | :--:  |
+| 2 bit | 2 bit | 2 bit | 2 bit |
 
 I-type of 8-bit-MIPS-Processor
-|op   |rs   |rt   |const|
-|:--: |:--: |:--: |:--: |
-|2 bit|2 bit|2 bit|2 bit|
+| op    | rs    | rt    | const |
+| :--:  | :--:  | :--:  | :--:  |
+| 2 bit | 2 bit | 2 bit | 2 bit |
 
 ### Program counter (PC)
 It use for count sequence of instruction.
