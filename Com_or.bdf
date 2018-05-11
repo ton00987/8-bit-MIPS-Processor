@@ -317,7 +317,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 568 304 720 384)
+	(rect 608 296 760 376)
 	(text "sign_extend" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst9" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -524,16 +524,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 488 296)
-	(pt 1344 296)
-	(bus)
-)
-(connector
-	(pt 488 232)
-	(pt 488 296)
-	(bus)
-)
-(connector
 	(pt 480 48)
 	(pt 1080 48)
 	(bus)
@@ -563,16 +553,6 @@ applicable agreement for further details.
 (connector
 	(pt 784 208)
 	(pt 832 208)
-	(bus)
-)
-(connector
-	(pt 720 336)
-	(pt 784 336)
-	(bus)
-)
-(connector
-	(pt 784 224)
-	(pt 784 336)
 	(bus)
 )
 (connector
@@ -663,8 +643,29 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+	(pt 192 200)
+	(pt 192 256)
+	(bus)
+)
+(connector
+	(text "instruction[5..4]" (rect 202 168 278 180)(font "Arial" ))
+	(pt 192 184)
+	(pt 536 184)
+	(bus)
+)
+(connector
+	(pt 488 280)
+	(pt 1344 280)
+	(bus)
+)
+(connector
+	(pt 488 232)
+	(pt 488 280)
+	(bus)
+)
+(connector
 	(pt 1344 136)
-	(pt 1344 296)
+	(pt 1344 280)
 	(bus)
 )
 (connector
@@ -678,24 +679,18 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 192 200)
-	(pt 192 256)
+	(pt 784 328)
+	(pt 760 328)
 	(bus)
 )
 (connector
-	(text "instruction[5..4]" (rect 202 168 278 180)(font "Arial" ))
-	(pt 192 184)
-	(pt 536 184)
-	(bus)
-)
-(connector
-	(pt 568 336)
-	(pt 232 336)
+	(pt 784 224)
+	(pt 784 328)
 	(bus)
 )
 (connector
 	(pt 232 256)
-	(pt 232 336)
+	(pt 232 328)
 	(bus)
 )
 (connector
@@ -707,6 +702,11 @@ applicable agreement for further details.
 (connector
 	(pt 232 256)
 	(pt 304 256)
+	(bus)
+)
+(connector
+	(pt 232 328)
+	(pt 608 328)
 	(bus)
 )
 (junction (pt -176 184))
